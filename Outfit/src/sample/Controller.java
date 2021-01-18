@@ -12,6 +12,7 @@ import org.fxmisc.richtext.LineNumberFactory;
 import org.fxmisc.richtext.model.StyleSpans;
 import org.fxmisc.richtext.model.StyleSpansBuilder;
 import org.reactfx.Subscription;
+import sample.interprete.Compilador;
 
 import java.time.Duration;
 import java.util.Collection;
@@ -23,6 +24,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static sample.Configs.Configs.*;
+import static sample.interprete.TiposToken.arrayToken;
 
 public class Controller {
     @FXML VBox centro;
@@ -58,6 +60,9 @@ public class Controller {
     }
     public void compilar(ActionEvent event){
         String error="";
+        Long t1=System.currentTimeMillis();
+        consola.setText("");
+        arrayToken.clear();
         String[] renglones=codeArea.getText().split("\\n");
         for (int x=0;x<renglones.length;x++){
             boolean encontro=false;
@@ -73,6 +78,18 @@ public class Controller {
 
         }
         consola.setText(error);
+        //comenzar a compilar
+        if (error.equals("")){
+            Compilador compilador = new Compilador(consola);
+            for (int x=0;x<renglones.length;x++){
+                boolean res=compilador.compliar(renglones[x]);
+                if (res){
+                    consola.appendText("\n Error de sintaxys en la linea"+(x+1));
+                }
+            }
+        }
+        Long t2=System.currentTimeMillis();
+        consola.appendText("\n Compilado en "+(t2 - t1)+ " Milisegundos");
     }
 
     private Task<StyleSpans<Collection<String>>> computeHighlightingAsync() {

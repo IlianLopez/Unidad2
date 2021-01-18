@@ -14,7 +14,7 @@ public class Configs {
             "rojo", "azul", "amarillo", "verde", "negro",
             "blanco", "naranja", "rosa", "cafe", "morado",
             "gris", "extra chica", "chica", "mediana", "grande",
-            "extra grande", "y", "o", "con", "de", "declarar", "como"
+            "extra grande", "y", "o", "con", "de", "declarar", "como", "print"
     };
 
     public static final String KEYWORD_PATTERN = "\\b(" + String.join("|", KEYWORDS) + ")\\b";
@@ -36,16 +36,7 @@ public class Configs {
     );
 
     public static final String sampleCode = String.join("\n", new String[] {
-            "declarar x como camiseta;",
-            "declarar x como playera;",
-            "declarar x como short;",
-            "declarar x como sueter;",
-            "declarar x como crocs;",
-            "declarar x como tennis;",
-            "declarar x como calzones;",
-            "declarar x como lentes;",
-            "declarar x como reloj;",
-            "declarar x como anillo;"
+            "print(10)",
 
 
 
@@ -60,6 +51,7 @@ public class Configs {
             "declarar [a-z]{1,} como calzones;",
             "declarar [a-z]{1,} como lentes;",
             "declarar [a-z]{1,} como reloj;",
-            "declarar [a-z]{1,} como anillo;"
+            "declarar [a-z]{1,} como anillo;",
+            "print[(][a-z 0-9]{1,}[)]"
     };
 }

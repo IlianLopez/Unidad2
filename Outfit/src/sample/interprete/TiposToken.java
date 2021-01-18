@@ -1,0 +1,65 @@
+package sample.interprete;
+
+import java.util.ArrayList;
+
+public class TiposToken {
+    public static String CAMISETA= "CAMISETA";
+    public static String PANTALON= "PANTALON";
+    public static String CALCETAS= "CALCETAS";
+    public static String CALCETINES= "CALCETINES";
+    public static String PLAYERA= "PLAYERA";
+    public static String CALZONES= "CALZONES";
+    public static String PANTALONERA= "PANTALONERA";
+    public static String SHORT= "SHORT";
+    public static String JOGGER= "JOGGER";
+    public static String SUDADERA= "SUDADERA";
+    public static String SUETER= "SUETER";
+    public static String CHAQUETA= "CHAQUETA";
+    public static String FALDA= "FALDA";
+    public static String PALYERA_DE_TIRANTES= "PLAYERA DE TIRANTES";
+    public static String BRASIER= "BRASIER";
+    public static String ZAPATOS= "ZAPATOS";
+    public static String TENNIS= "TENNIS";
+    public static String CROCS= "CROCS";
+    public static String PULSERA= "PULSERA";
+    public static String RELOJ= "RELOJ";
+    public static String CORBATA= "CORBATA";
+    public static String CINTURON= "CINTURON";
+    public static String TIRANTES= "TIRANTES";
+    public static String SOMBRERO= "SOMBRERO";
+    public static String GORRA= "GORRA";
+    public static String COLLAR= "COLLAR";
+    public static String ARETES= "ARETES";
+    public static String LENTES= "LENTES";
+    public static String ANILLO= "ANILLO";
+    public static String BOLSA= "BOLSA";
+    public static String MOCHILA= "MOCHILA";
+    public static String AUDIFONOS= "AUDIFONOS";
+    public static String MONIO= "MONIO";
+    public static String DIADEMA= "DIADEMA";
+    public static String LIGA= "LIGA";
+    public static String ROJO= "ROJO";
+    public static String AZUL= "AZUL";
+    public static String AMARILLO= "AMARILLO";
+    public static String VERDE= "VERDE";
+    public static String NEGRO= "NEGRO";
+    public static String BLANCO= "BLANCO";
+    public static String NARANJA= "NARANJA";
+    public static String ROSA= "ROSA";
+    public static String CAFE= "CAFE";
+    public static String MORADO= "MORADO";
+    public static String GRIS= "GRIS";
+    public static String EXTRA_CHICA= "EXTRA CHICA";
+    public static String CHICA= "CHICA";
+    public static String MEDIANA= "MEDIANA";
+    public static String GARNDE= "GRANDE";
+    public static String EXTRA_GRANDE= "EXTRA GRANDE";
+    public static String Y= "Y";
+    public static String O= "O";
+    public static String CON= "CON";
+    public static String DE= "DE";
+    public static String DECLARAR= "DECLARAR";
+    public static String COMO= "COMO";
+    public static ArrayList<Token> arrayToken=new ArrayList<>();
+
+}
