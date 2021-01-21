@@ -29,6 +29,7 @@ import static sample.interprete.TiposToken.arrayToken;
 public class Controller {
     @FXML VBox centro;
     @FXML TextArea consola;
+    @FXML VBox paneResult;
     private CodeArea codeArea;
     private ExecutorService executor;
     @FXML protected void initialize(){
@@ -63,6 +64,7 @@ public class Controller {
         Long t1=System.currentTimeMillis();
         consola.setText("");
         arrayToken.clear();
+        paneResult.getChildren().clear();
         String[] renglones=codeArea.getText().split("\\n");
         for (int x=0;x<renglones.length;x++){
             boolean encontro=false;
@@ -80,7 +82,7 @@ public class Controller {
         consola.setText(error);
         //comenzar a compilar
         if (error.equals("")){
-            Compilador compilador = new Compilador(consola);
+            Compilador compilador = new Compilador(consola, paneResult);
             for (int x=0;x<renglones.length;x++){
                 boolean res=compilador.compliar(renglones[x]);
                 if (res){
